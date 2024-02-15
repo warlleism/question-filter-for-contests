@@ -10,12 +10,11 @@ export default function InputSubject() {
     return (
         <div className='flex gap-4'>
             <Autocomplete
-                disabled={!state.questions}
+                disabled={!state?.selectedValue?.label}
                 disablePortal
-                getOptionLabel={state.selectedValue?.title}
                 id="combo-box-demo"
                 size="small"
-                options={state.questions}
+                options={state.selectedValue?.subjects}
                 onChange={(event, newValue) => setState({ ...state, subject: newValue })}
                 className='w-[100%] bg-[#f4f5f7]'
                 renderInput={(params) => <TextField {...params} label="Assuntos" />}

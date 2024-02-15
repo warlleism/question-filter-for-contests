@@ -16,7 +16,7 @@ export default function InputInstitution() {
                 disablePortal
                 size="small"
                 id="combo-box-demo"
-                onChange={(event, newValue) => setState({ ...state, institution: newValue })}
+                onChange={(event, newValue) => setState({ ...state, institution: newValue.label })}
                 options={topQuestions}
                 renderInput={(params) => <TextField {...params} label="Instituição" />}
             />

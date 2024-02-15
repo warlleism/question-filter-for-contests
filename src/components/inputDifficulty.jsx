@@ -9,7 +9,6 @@ import Stack from '@mui/material/Stack';
 export default function InputDifficulty() {
 
     const { state, setState } = useContext(Context);
-    console.log(state)
 
     return (
         <Stack spacing={3} className='w-[100%] '>

@@ -9,7 +9,7 @@ export default function InputDiscipline() {
 
     useEffect(() => {
         let itens = state?.selectedValue?.subjects.map((e) => ({ label: e }));
-        setState({ ...state, questions: itens })
+        setState({ ...state, questions: itens?.label })
     }, [state?.selectedValue]);
 
     return (
