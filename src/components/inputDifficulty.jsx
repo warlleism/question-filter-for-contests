@@ -12,26 +12,18 @@ export default function InputDifficulty() {
     console.log(state)
 
     return (
-        <Stack
-            spacing={3}
-            className='w-[100%] bg-[#f4f5f7]'
-        >
+        <Stack spacing={3} className='w-[100%] '>
             <Autocomplete
                 multiple
-                id="tags-standard"
+                size="small"
+                id="size-small-outlined-multi"
                 options={topQuestions}
-                getOptionLabel={(option) => option.label}
                 onChange={(event, newValue) => setState({ ...state, difficulty: newValue })}
+                getOptionLabel={(option) => option.label}
                 renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        variant="standard"
-                        label="Dificuldade"
-                        placeholder="Dificuldade"
-                    />
+                    <TextField {...params} label="Dificuldade" placeholder="Dificuldade" />
                 )}
             />
-
         </Stack>
     );
 }

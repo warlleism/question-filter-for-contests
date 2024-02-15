@@ -21,6 +21,7 @@ export default function InputDiscipline() {
                 options={topQuestions}
                 value={state.selectedValue}
                 id="combo-box-demo"
+                size="small"
                 onChange={(event, newValue) => setState({ ...state, selectedValue: newValue })}
                 className='w-[100%] bg-[#f4f5f7]'
                 renderInput={(params) => <TextField {...params} label="Disciplinas" />}

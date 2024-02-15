@@ -9,10 +9,11 @@ export default function InputBanking() {
     const { state, setState } = useContext(Context);
 
     return (
-        <div className='flex gap-4'>
+        <div className='flex gap-4 '>
 
             <Autocomplete
                 disablePortal
+                size="small"
                 id="combo-box-demo"
                 onChange={(event, newValue) => setState({ ...state, banking: newValue })}
                 options={topQuestions}

@@ -4,12 +4,12 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Context } from '../context/provider';
 
 
-export default function InputEducation() {
+export default function InputType() {
 
     const { state, setState } = useContext(Context);
 
     return (
-        <div className='flex gap-4'>
+        <div>
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
@@ -17,15 +17,14 @@ export default function InputEducation() {
                 onChange={(event, newValue) => setState({ ...state, education: newValue })}
                 options={topQuestions}
                 className='w-[100%] bg-[#f4f5f7]'
-                renderInput={(params) => <TextField {...params} label="Escolaridade" />}
+                renderInput={(params) => <TextField {...params} label="Tipo" />}
             />
         </div>
     );
 }
 
 const topQuestions = [
-    { label: 'Superior' },
-    { label: 'Médio' },
-    { label: 'Fundamental' },
+    { label: 'Múltipla escolha' },
+    { label: 'Certo e errado' },
 ];
 

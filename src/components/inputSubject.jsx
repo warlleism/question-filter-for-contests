@@ -14,6 +14,7 @@ export default function InputSubject() {
                 disablePortal
                 getOptionLabel={state.selectedValue?.title}
                 id="combo-box-demo"
+                size="small"
                 options={state.questions}
                 onChange={(event, newValue) => setState({ ...state, subject: newValue })}
                 className='w-[100%] bg-[#f4f5f7]'

@@ -14,6 +14,7 @@ export default function InputInstitution() {
             <Autocomplete
                 className='w-[100%] bg-[#f4f5f7]'
                 disablePortal
+                size="small"
                 id="combo-box-demo"
                 onChange={(event, newValue) => setState({ ...state, institution: newValue })}
                 options={topQuestions}
