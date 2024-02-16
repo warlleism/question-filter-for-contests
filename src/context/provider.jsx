@@ -6,6 +6,8 @@ export const Context = createContext();
 const ContextProvider = ({ children }) => {
 
     const [questions, setQuestions] = useState([])
+    const [filter, setFilter] = useState()
+    const [showFilters, setShowFilters] = useState(false)
 
     const [state, setState] = useState({
         selectedValue: {
@@ -21,7 +23,7 @@ const ContextProvider = ({ children }) => {
     });
 
     return (
-        <Context.Provider value={{ state, setState, questions, setQuestions }}>
+        <Context.Provider value={{ state, setState, questions, setQuestions, filter, setFilter, showFilters, setShowFilters }}>
             {children}
         </Context.Provider>
     );

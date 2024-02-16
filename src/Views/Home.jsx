@@ -10,6 +10,7 @@ import { FilterButton } from '../components/filterButton'
 import { ClearFilterButton } from '../components/clearFilterButton'
 import { SaveFilterButton } from '../components/saveFilterButton'
 import { RenderSaveFilter } from '../components/renderSaveFilter'
+import { ShowFilterButton } from '../components/showFIlterButton'
 
 function Home() {
 
@@ -20,6 +21,9 @@ function Home() {
             </div>
             <div className=' w-full flex flex-col justify-center items-center lg:w-[80%] mx-auto'>
                 <div className=' w-full flex flex-col justify-center items-center lg:items-start gap-3 lg:flex-row'>
+                    <div className='w-[70%] lg:w-[100%] flex justify-end'>
+                        <ShowFilterButton />
+                    </div>
                     <div className='w-[70%] flex flex-col gap-3 lg:w-[100%]'>
                         <InputDiscipline />
                         <InputSubject />

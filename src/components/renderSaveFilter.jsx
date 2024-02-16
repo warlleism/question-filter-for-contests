@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
+import { Context } from "../context/provider";
+import { DeleteItem } from "./icons/deleteIcon";
 
 export const RenderSaveFilter = () => {
 
-    const [filter, setFilter] = useState()
+    const { filter, setFilter, setState, showFilters } = useContext(Context);
 
     useEffect(() => {
         const localData = localStorage.getItem('filter')
@@ -10,11 +12,12 @@ export const RenderSaveFilter = () => {
     }, [])
 
     return (
-        <div className="w-full mt-5 ">
-            <div className="text-[1.2rem] text-[#0112317b] mb-4 font-semibold">Filtros Salvos</div>
+        <div className="w-full mt-5" style={{ display: showFilters ? 'block' : 'none' }}>
+            <div style={{ display: filter?.length > 0 ? 'block' : 'none' }} className="text-[1.2rem] text-[#0112317b] mb-4 font-semibold">Filtros Salvos</div>
             {filter?.map((e, index) => {
                 return (
-                    <div key={index} style={{ borderRadius: 10 }} className="mb-3 cursor-pointer text-[#fff] w-full gap-1 p-4 flex flex-col bg-[#4a8cf6] transition-all hover:bg-[#3969a3] ">
+                    <div key={index} onClick={() => setState(e)} style={{ borderRadius: 10 }} className="mb-8 cursor-pointer text-[#fff] w-full gap-1 p-4 flex flex-col bg-[#4a8cf6] transition-all hover:bg-[#3969a3] relative ">
+                        <DeleteItem id={e.id} />
                         <div className="flex gap-3 w-full justify-center items-center">
                             <div className="flex gap-3 w-[50%]">
                                 <div className="font-semibold">
