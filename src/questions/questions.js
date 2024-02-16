@@ -25,6 +25,7 @@ export const Questions = [
     banking: "ACAFE - Associação Catarinense das Fundações Educacionais",
     institution: "Prefeitura de Pacuja - Prefeitura de Pacujá - CE",
   },
+ 
   {
     id: 2,
     question: {
@@ -38,11 +39,12 @@ export const Questions = [
       Está correto o que se afirma em:
       `,
       a: { q: "I, apenas.", r: "i" },
-      b: { q: "II, apenas.", r: "c" },
+      b: { q: "II, apenas.", r: "i" },
       c: { q: "III, apenas.", r: "i" },
-      d: { q: "I e II, apenas.", r: "i" },
+      d: { q: "I e II, apenas.", r: "c" },
       e: { q: "I e III, apenas.", r: "i" },
     },
+    course: "Engenharia Civil",
     type: "Múltipla escolha",
     subject: "Estruturas",
     difficulty: ["Muito fácil", "Médio"],
@@ -50,4 +52,5 @@ export const Questions = [
     banking: "ACAFE - Associação Catarinense das Fundações Educacionais",
     institution: "Prefeitura de Pacuja - Prefeitura de Pacujá - CE",
   },
+ 
 ];

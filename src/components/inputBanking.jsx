@@ -15,6 +15,7 @@ export default function InputBanking() {
                 disablePortal
                 size="small"
                 id="combo-box-demo"
+                value={state?.banking}
                 onChange={(event, newValue) => setState({ ...state, banking: newValue.label })}
                 options={topQuestions}
                 className='w-[100%] bg-[#f4f5f7]'

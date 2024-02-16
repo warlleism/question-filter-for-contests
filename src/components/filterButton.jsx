@@ -9,24 +9,26 @@ export const FilterButton = () => {
     const { state, setQuestions } = useContext(Context);
 
     const filterQuestions = () => {
-        const filter = Questions.filter((e) => {
+        const filteredQuestions = Questions.filter((e) => {
             const validType = e.type === state.type;
             const validSubject = e.subject === state.subject;
             const validDifficulty = state.difficulty.some(diff => e.difficulty.includes(diff.label));
             const validEducation = e.education === state.education;
             const validBanking = e.banking === state.banking;
             const validInstitution = e.institution === state.institution;
-            const validSubjectIndex = state.selectedValue.subjects?.[1] && e.subject === state.selectedValue.subjects[1];
+            const validSubjectIndex = state.selectedValue?.subjects?.[1] && e.subject === state.selectedValue.subjects[1];
             const validCourse = e.course === state.selectedValue.label;
 
-            if (validType && validSubject && validDifficulty && validEducation && validBanking &&
-                validInstitution && validSubjectIndex && validCourse) {
-                console.log(e);
-            }
-        })
+            return validType && validSubject && validDifficulty && validEducation && validBanking &&
+                validInstitution && validSubjectIndex && validCourse;
+        });
+
+        setQuestions(filteredQuestions);
     }
 
     return (
-        <Button className='w-[30%]' variant="contained" onClick={() => filterQuestions()}>Filtrar Questões</Button>
+        <>
+            <Button className='w-[30%]' variant="contained" onClick={() => filterQuestions()}>Filtrar Questões</Button>
+        </>
     )
 }

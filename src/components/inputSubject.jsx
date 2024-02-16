@@ -14,7 +14,8 @@ export default function InputSubject() {
                 disablePortal
                 id="combo-box-demo"
                 size="small"
-                options={state.selectedValue?.subjects}
+                value={state?.subject}
+                options={state?.selectedValue?.subjects}
                 onChange={(event, newValue) => setState({ ...state, subject: newValue })}
                 className='w-[100%] bg-[#f4f5f7]'
                 renderInput={(params) => <TextField {...params} label="Assuntos" />}

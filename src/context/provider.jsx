@@ -8,12 +8,15 @@ const ContextProvider = ({ children }) => {
     const [questions, setQuestions] = useState([])
 
     const [state, setState] = useState({
-        selectedValue: null,
+        selectedValue: {
+            label: '',
+            subjects: []
+        },
         subject: '',
         banking: '',
         institution: '',
         education: '',
-        difficulty: '',
+        difficulty: [],
         type: ''
     });
 

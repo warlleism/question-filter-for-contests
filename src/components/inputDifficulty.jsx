@@ -17,6 +17,7 @@ export default function InputDifficulty() {
                 size="small"
                 id="size-small-outlined-multi"
                 options={topQuestions}
+                value={state.difficulty}
                 onChange={(event, newValue) => setState({ ...state, difficulty: newValue })}
                 getOptionLabel={(option) => option.label}
                 renderInput={(params) => (

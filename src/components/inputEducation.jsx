@@ -14,6 +14,7 @@ export default function InputEducation() {
                 disablePortal
                 id="combo-box-demo"
                 size="small"
+                value={state.education}
                 onChange={(event, newValue) => setState({ ...state, education: newValue.label })}
                 options={topQuestions}
                 className='w-[100%] bg-[#f4f5f7]'
