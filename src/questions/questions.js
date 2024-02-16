@@ -1,6 +1,5 @@
 export const Questions = [
   {
-    id: 1,
     question: {
       title: `
       Considerando o circuito proposto e tomando por base a lei de Ohm, analise as afirmativas a seguir.
@@ -26,7 +25,6 @@ export const Questions = [
     type: "Múltipla escolha",
   },
   {
-    id: 2,
     question: {
       title: `
       Considerando o circuito proposto e tomando por base a lei de Ohm, analise as afirmativas a seguir.

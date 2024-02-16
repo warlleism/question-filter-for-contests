@@ -13,6 +13,7 @@ export const ClearFilterButton = () => {
                 label: '',
                 subjects: []
             },
+            id: '',
             subject: '',
             banking: '',
             institution: '',
@@ -21,7 +22,6 @@ export const ClearFilterButton = () => {
             type: ''
         })
     }
-
 
     return <Button className='w-[30%]' variant="outlined" onClick={clearFilter}><CloseIcon />Limpar Filtro</Button>
 }

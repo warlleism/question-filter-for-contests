@@ -8,7 +8,6 @@ export default function InputDiscipline() {
 
     return (
         <div className='flex gap-4'>
-
             <Autocomplete
                 isOptionEqualToValue={(option, value) => option.label === value.label}
                 getOptionLabel={(option) => option.label}
@@ -20,7 +19,6 @@ export default function InputDiscipline() {
                 className='w-[100%] bg-[#f4f5f7]'
                 renderInput={(params) => <TextField {...params} label="Disciplinas" />}
             />
-
         </div>
     );
 }

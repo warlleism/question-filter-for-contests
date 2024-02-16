@@ -9,6 +9,7 @@ import { RenderQuestion } from '../components/renderQuestion'
 import { FilterButton } from '../components/filterButton'
 import { ClearFilterButton } from '../components/clearFilterButton'
 import { SaveFilterButton } from '../components/saveFilterButton'
+import { RenderSaveFilter } from '../components/renderSaveFilter'
 
 function Home() {
 
@@ -37,6 +38,9 @@ function Home() {
                     <ClearFilterButton />
                     <SaveFilterButton />
                     <FilterButton />
+                </div>
+                <div className='w-[70%] flex flex-row  justify-between mt-3 lg:w-[100%]'>
+                    <RenderSaveFilter />
                 </div>
                 <div className='w-[70%] flex flex-row  justify-between mt-3 lg:w-[100%]'>
                     <RenderQuestion />
