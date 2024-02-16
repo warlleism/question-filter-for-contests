@@ -29,11 +29,4 @@ const topQuestions = [
     { label: 'Prefeitura de Pacuja - Prefeitura de Pacujá - CE' },
     { label: 'Camara de Mogi Mirim - Câmara de Mogi Mirim - SP' },
     { label: 'Prefeitura de Ipumirim - Prefeitura de Ipumirim - SC' },
-    { label: 'Prefeitura Caucaia - Prefeitura de Caucaia - CE' },
-    { label: 'Prefeitura de Varzea Alegre - Prefeitura de Várzea Alegre - CE - CE' },
-    { label: 'Hospital Israelita Albert Einstein - Hospital Israelita Albert Einstein - SP' },
-    { label: 'Camara de Tangua - Câmara de Tanguá - RJ' },
-    { label: 'Camara de Pereiras - Câmara de Pereiras - SP' },
-    { label: 'CMJF - Colégio Militar de Juiz de Fora - MG' },
-    { label: 'CBM PI - Corpo de Bombeiros Militar do Piauí - PI' },
 ];

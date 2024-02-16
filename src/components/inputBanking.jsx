@@ -29,10 +29,4 @@ const topQuestions = [
     { label: 'ACAFE - Associação Catarinense das Fundações Educacionais' },
     { label: 'Instituto ACCESS' },
     { label: 'UECE - Universidade Estadual do Ceará' },
-    { label: 'UERJ - Universidade Estadual do Rio de Janeiro' },
-    { label: 'UFF - Universidade Federal Fluminense' },
-    { label: 'UFJF - Universidade Federal de Juiz de Fora' },
-    { label: 'UFPB - Universidade Federal da Paraíba' },
-    { label: 'UFRJ - Universidade Federal do Rio de Janeiro' },
-    { label: 'UNIFAP - Universidade Federal do Amapá' },
 ];

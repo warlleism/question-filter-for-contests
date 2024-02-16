@@ -16,11 +16,10 @@ export const FilterButton = () => {
             const validEducation = e.education === state.education;
             const validBanking = e.banking === state.banking;
             const validInstitution = e.institution === state.institution;
-            const validSubjectIndex = state.selectedValue?.subjects?.[1] && e.subject === state.selectedValue.subjects[1];
             const validCourse = e.course === state.selectedValue.label;
 
             return validType && validSubject && validDifficulty && validEducation && validBanking &&
-                validInstitution && validSubjectIndex && validCourse;
+                validInstitution && validCourse;
         });
 
         setQuestions(filteredQuestions);
