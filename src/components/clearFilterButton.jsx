@@ -13,7 +13,6 @@ export const ClearFilterButton = () => {
                 label: '',
                 subjects: []
             },
-            id: '',
             subject: '',
             banking: '',
             institution: '',
@@ -23,5 +22,5 @@ export const ClearFilterButton = () => {
         })
     }
 
-    return <Button className='w-[30%]' variant="outlined" onClick={clearFilter}><CloseIcon />Limpar Filtro</Button>
+    return <Button className='w-[30%]' style={{ background: "#121b2e", color: "#fff" }} variant="outlined" onClick={clearFilter}><CloseIcon />Limpar Filtro</Button>
 }

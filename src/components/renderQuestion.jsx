@@ -47,7 +47,7 @@ export const RenderQuestion = () => {
                             ))}
                         </RadioGroup>
                     </FormGroup>
-                    <Button variant="contained" color="primary" onClick={() => revealCorrectAnswers(e.id, index)}>
+                    <Button variant="contained" style={{ background: "#121b2e" }} onClick={() => revealCorrectAnswers(e.id, index)}>
                         Mostrar Resposta Correta
                     </Button>
                 </div>

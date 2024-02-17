@@ -13,7 +13,7 @@ export const DeleteItem = ({ id }) => {
     };
 
     return (
-        <div className='absolute right-0 top-[-30px] cursor-pointer' onClick={removeFilter}>
+        <div className=' w-full flex justify-end mb-2 z-50  cursor-pointer' onClick={removeFilter}>
             <DeleteIcon className='text-[#f32e2eb5]' />
         </div>
     )

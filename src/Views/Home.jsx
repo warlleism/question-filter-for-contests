@@ -20,7 +20,7 @@ function Home() {
                 Questões de Concursos
             </div>
             <div className=' w-full flex flex-col justify-center items-center lg:w-[80%] mx-auto'>
-                <div className=' w-full flex flex-col justify-center items-center lg:items-start gap-3 lg:flex-row'>
+                <div className=' w-full flex flex-col justify-center items-center lg:items-start gap-3 '>
                     <div className='w-[70%] lg:w-[100%] flex justify-end'>
                         <ShowFilterButton />
                     </div>
@@ -38,7 +38,7 @@ function Home() {
                         <InputType />
                     </div>
                 </div>
-                <div className='w-[70%] flex flex-row  justify-between lg:w-[100%] mt-5'>
+                <div className='w-[70%] flex flex-row  justify-between lg:w-[50%] mt-5'>
                     <ClearFilterButton />
                     <SaveFilterButton />
                     <FilterButton />

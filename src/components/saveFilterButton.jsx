@@ -6,31 +6,8 @@ import { Context } from "../context/provider";
 // ... (import statements)
 
 export const SaveFilterButton = () => {
-    const { state, setFilter, setShowFilters } = useContext(Context);
-
+    const { state, setFilter, setShowFilters, checkEmptyValues } = useContext(Context);
     const isAnyItemEmpty = checkEmptyValues(state);
-
-    function checkEmptyValues(obj) {
-        for (const key in obj) {
-            if (typeof obj[key] === 'object') {
-                if (Array.isArray(obj[key])) {
-                    if (obj[key].length === 0) {
-                        return true;
-                    }
-                } else {
-                    if (checkEmptyValues(obj[key])) {
-                        return true;
-                    }
-                }
-            } else {
-                if (obj[key] === '' || obj[key] === null || obj[key] === undefined) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     const handleSave = () => {
         if (isAnyItemEmpty) {
             console.error("Cannot save filter with empty items");
@@ -53,7 +30,7 @@ export const SaveFilterButton = () => {
     };
 
     return (
-        <Button className='w-[30%]' variant="outlined" onClick={() => handleSave()} disabled={isAnyItemEmpty}>
+        <Button className='w-[30%]' style={{ background: isAnyItemEmpty ? "#121b2e5a" : "#121b2e", color: "#fff" }} variant="outlined" onClick={() => handleSave()} disabled={isAnyItemEmpty}>
             <SaveIcon />
             Salvar Filtro
         </Button>
